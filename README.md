@@ -26,32 +26,8 @@ In the directory `commitment` you wil find five files:
 - `commitment_runner.py`: You should code the training loop. Running `python commitment_runner.py` should train the Commitment agents.
 
 # Change Log:
-- You can use `FrozenLake-v1` instead of `FrozenLake-v0`. The code has been updated to load v1 if v0 is not available.
-- `frozen_lake/runner.py` line 66 the training flag was not set to False here is the correct line: `cum_rewards_eval[eval_episode] = run_episode(env, agent, False, gamma)`.
-- Error in `commitment/commitment_agent.py`: The docstring with the example was not correct, here is the correct version:
-```python
-def generate_t_to_seq(t_max: int) -> Tuple[dict, ndarray]:
-    """
-    Function that generates the different commitment sequences.
 
-    Example
-    --------------------------
-    >>> (id_to_seq, t_to_seq) = generate_t_to_seq(10)
-    >>> id_to_seq
-    {0: array([0, 2, 5, 9]), 1: array([1, 4, 8]), 2: array([3, 7]), 3: array([6])}
-    >>> t_to_seq
-    array([0, 1, 0, 2, 1, 0, 3, 2, 1, 0])
-
-    :param t_max: The number of timesteps.
-    :return: (id_to_seq, t_to_seq) with id_to_seq a dictionary mapping
-            sequences number to an array containing all its timesteps. t_to_seq is a array of size t_max with t_to_seq[t]
-            being the sequence number of the timestep t.
-    """
-    # TODO: complete.
-    raise NotImplementedError
-```
-- `frozen_lake/matrix_games.py`: Removed the docstring of the MatrixGame constructor.
-- `commitment/iql_agent.py`: Typo in docstring of IQLAgent.greedy_action as it does not take any parameter. 
+Changes in the code will be mentioned here. Empty for now.
 
 # Additional information:
 
