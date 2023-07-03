@@ -8,11 +8,12 @@ def generate_t_to_seq(t_max: int) -> Tuple[dict, ndarray]:
 
     Example
     --------------------------
-    >>> (id_to_seq, t_to_seq) = generate_t_to_seq(10)
+    >>> (id_to_seq, t_to_seq) = generate_t_to_seq(22)
     >>> id_to_seq
-    {0: array([0, 2, 5, 9]), 1: array([1, 4, 8]), 2: array([3, 7]), 3: array([6])}
+    {0: array([ 0,  2,  5,  9, 14, 20]), 1: array([ 1,  4,  8, 13, 19]), 2: array([ 3,  7, 12, 18]),
+    3: array([ 6, 11, 17]), 4: array([10, 16]), 5: array([15]), 6: array([21])}
     >>> t_to_seq
-    array([0, 1, 0, 2, 1, 0, 3, 2, 1, 0])
+    array([0, 1, 0, 2, 1, 0, 3, 2, 1, 0, 4, 3, 2, 1, 0, 5, 4, 3, 2, 1, 0, 6])
 
     :param t_max: The number of timesteps.
     :return: (id_to_seq, t_to_seq) with id_to_seq a dictionary mapping
